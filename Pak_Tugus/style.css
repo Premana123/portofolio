@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f3f5f8;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: #f3f5f8;
+    padding: 12px 20px;
+}
+
+#logo{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-left: 55px;
+}
+span{
+    color: #c51dde;
+}
+
+.menu {
+    display: flex;
+    padding-right: 20px;
+}
+
+.menu li {
+    padding-left: 30px;
+}
+
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #3d535f;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #c51dde;
+    transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {
+    width: 100%;
+}
+
+.open-menu,
+.close-menu {
+    position: absolute;
+    color: #3d535f;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+#check {
+    display: none;
+}
+
+@media(max-width: 610px) {
+    .menu {
+        flex-direction: column;
+       justify-content: center;
+        width: 100%;
+        height: 40%;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        transition: all 0.2s ease-in-out;
+        background-color: rgba(255, 255, 255, 0.4);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+}
+
+.menu li {
+    margin-top: 10px;
+}
+
+.menu li a {
+    padding: 5px;
+}
+
+.menu li a:hover{
+    font-size: 18px;
+    margin-left:10px;
+}
+
+.open-menu,
+.close-menu {
+    display: block;
+    top: 20px;
+}
+
+#check:checked~.menu {
+    right: 0;
+    }
+}
+
+/* End Navbar */
+
+/* Content */
+.isi{
+    margin-top: 120px;
+    margin-left: 60px;
+}
+h2{
+    color: #c51dde;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-weight:800;
+    font-size: 40px;
+}
+h3{
+    color: #3d535f;
+    font-weight: 700;
+    font-size: 45px;
+    margin-left: 20px;
+    margin-top: 2px;
+}
+
+p{
+    color: #3d535f;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+a{
+    color: #f3f5f8;
+    text-decoration: none;
+}
+button{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #c51dde;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 8px 8px 2px #61616167;
+    z-index: 1;
+}
+button:hover{
+    background-color: rgba(130,20,171,1);
+    transition: .5s;
+    font-size: 21px;
+}
+
+.gambar1{
+    height: 450px;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: -110px;
+}
+.gambar2{
+    height: 480px;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: -145px;
+}
+
+.bulat {
+    width: 150px;
+    height: 150px;
+    background: rgb(130,20,171);
+    background: linear-gradient(90deg, rgba(130,20,171,1) 0%, rgba(233,62,249,1) 54%);
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 30%;
+}
+
+.bulat2 {
+    width: 150px;
+    height: 150px;
+    background: rgb(130,20,171);
+    background: linear-gradient(30deg, rgba(130,20,171,1) 0%, rgba(233,62,249,1) 54%);
+    border-radius: 50%;
+    position: absolute;
+    margin-left: -5%;
+    margin-top: -3%;
+}
+.sosmed{
+    position: absolute;
+    display: flex;
+    margin-left: 100px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#ig{
+    border: 3px solid rgba(233,62,249,1);
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 100px;
+    color: rgba(233,62,249,1);
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-size: 25px;
+}
+#fb{
+    border: 3px solid rgba(233,62,249,1);
+    padding-left: 19px;
+    padding-right: 19px;
+    border-radius: 100px;
+    color: rgba(233,62,249,1);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 23px;
+    margin-left: 10px;
+}
+#twt{
+    border: 3px solid rgba(233,62,249,1);
+    padding-left: 13px;
+    padding-right: 13px;
+    border-radius: 100px;
+    color: rgba(233,62,249,1);
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-size: 25px;
+    margin-left: 10px;
+}
+#ig:hover{
+    color: rgb(130,20,171);
+    border: 3px solid rgb(130,20,171);
+    transition: .5s ease-in-out;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+#fb:hover{
+    color: rgb(130,20,171);
+    border: 3px solid rgb(130,20,171);
+    transition: .5s ease-in-out;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#twt:hover{
+    color: rgb(130,20,171);
+    border: 3px solid rgb(130,20,171);
+    transition: .5s ease-in-out;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+@media(max-width: 610px) {
+    .bulat,.bulat2{
+        display: none;
+    }
+    #logo{
+        font-size: 25px;
+        margin-left: -10px;
+    }
+
+    .gambar1{
+        border-radius: 50%;
+        height: 125px;
+        margin-top: -190px;
+        margin-left: -1px;
+        margin-left: 80px;
+    }
+
+    .gambar2{
+        border-radius: 50%;
+        border: 3px solid #c51dde;
+        height: 130px;
+        margin-top: -190px;
+        margin-left: -1px;
+        margin-left: 80px;
+    }
+
+    h2{
+        margin-top: 60%;
+        text-align: center;
+        margin-right: 60px;
+    }
+
+    h3{
+        font-size: 35px;
+        text-align: center;
+        margin-left: -50px;
+    }
+    p{
+        text-align: center;
+        justify-content: center;
+        margin-left: -50px;
+        font-size: 13px;
+    }
+
+    button{
+        margin-left: 50px;
+    }
+    .sosmed{
+        margin-left: 107px;
+    }
+}
